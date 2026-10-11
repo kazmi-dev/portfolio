@@ -1,0 +1,212 @@
+{
+  "$schema": "./portfolio.schema.json",
+  "person": {
+    "name": "[Full Name]",
+    "role": "Android & Kotlin Multiplatform Developer",
+    "headline": "I build Android apps *people keep.*",
+    "location": "[City], Pakistan",
+    "utcOffset": 5,
+    "avatar": "",
+    "resume": "",
+    "email": "you@yourdomain.com",
+    "available": true,
+    "availableNote": "Open to freelance work",
+    "company": {
+      "name": "Agile Interface",
+      "role": "Co-founder",
+      "url": ""
+    }
+  },
+  "about": [
+    "I build Android apps in Kotlin with both Jetpack Compose and classic XML views. At Agile Interface I'm now sharing code across Android, iOS and web with Compose Multiplatform.",
+    "[Second paragraph: how you started, what you're learning right now, and the kind of work you're looking for.]"
+  ],
+  "stats": [
+    {
+      "label": "apps shipped",
+      "value": "[X]+"
+    },
+    {
+      "label": "years writing Kotlin",
+      "value": "[X]"
+    },
+    {
+      "label": "open-source libraries",
+      "value": "[X]"
+    }
+  ],
+  "skills": [
+    {
+      "group": "Language",
+      "items": [
+        "Kotlin",
+        "Coroutines",
+        "Flow"
+      ]
+    },
+    {
+      "group": "UI",
+      "items": [
+        "Jetpack Compose",
+        "XML Views",
+        "Compose Multiplatform",
+        "Material 3"
+      ]
+    },
+    {
+      "group": "Architecture",
+      "items": [
+        "MVVM",
+        "Clean Architecture",
+        "KMP shared modules"
+      ]
+    },
+    {
+      "group": "Ship & earn",
+      "items": [
+        "Google Play Console",
+        "AdMob",
+        "Gradle KTS",
+        "Git"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Qibla Finder",
+      "kind": "app",
+      "summary": "Accurate Qibla direction with a live compass, prayer times for your city and a Hijri calendar.",
+      "platforms": [
+        "android"
+      ],
+      "metrics": [
+        {
+          "label": "Installs",
+          "value": "[X]"
+        },
+        {
+          "label": "Store rating",
+          "value": "[X.X]"
+        }
+      ],
+      "image": "",
+      "icon": "",
+      "color": "#1E3A8A",
+      "install": "",
+      "links": [
+        {
+          "label": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.qibla.finder.qiblacompass.qibladirection.hijricalendar.prayertime"
+        }
+      ]
+    },
+    {
+      "name": "Street View Navigation",
+      "kind": "app",
+      "summary": "Street view, voice navigation and live traffic status in one lightweight app.",
+      "platforms": [
+        "android"
+      ],
+      "metrics": [
+        {
+          "label": "Installs",
+          "value": "[X]"
+        },
+        {
+          "label": "Store rating",
+          "value": "[X.X]"
+        }
+      ],
+      "image": "",
+      "icon": "",
+      "color": "#0B7A55",
+      "install": "",
+      "links": [
+        {
+          "label": "Google Play",
+          "url": "https://play.google.com/store/apps/details?id=com.streetview.voice.navigation.traffic.status"
+        }
+      ]
+    },
+    {
+      "name": "AdsNextGen",
+      "kind": "library",
+      "summary": "Open-source Android library built on Google's Next-Gen Mobile Ads SDK. Banners, interstitials and native ads with less boilerplate.",
+      "platforms": [
+        "android"
+      ],
+      "metrics": [
+        {
+          "label": "GitHub stars",
+          "value": "[X]"
+        },
+        {
+          "label": "Latest version",
+          "value": "[X.X]"
+        }
+      ],
+      "image": "",
+      "icon": "",
+      "color": "#B45309",
+      "install": "implementation(\"[group]:adsnextgen:[version]\")",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/kazmi-dev/AdsNextGen"
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Co-founder & KMP Developer",
+      "org": "Agile Interface (Private) Limited",
+      "from": "2026",
+      "to": "now",
+      "summary": "Building our own Compose Multiplatform products for Android, iOS and web."
+    },
+    {
+      "role": "[Android Developer]",
+      "org": "[Company]",
+      "from": "[YYYY]",
+      "to": "[YYYY]",
+      "summary": "[One line on what you shipped there and what changed because of it.]"
+    },
+    {
+      "role": "[Degree]",
+      "org": "[University]",
+      "from": "[YYYY]",
+      "to": "[YYYY]",
+      "summary": ""
+    }
+  ],
+  "services": [
+    {
+      "title": "Android apps",
+      "text": "Native Android apps in Kotlin, with Jetpack Compose or XML views."
+    },
+    {
+      "title": "Kotlin Multiplatform",
+      "text": "Share logic and UI between Android, iOS and web from one codebase."
+    },
+    {
+      "title": "Ads & monetisation",
+      "text": "AdMob banners, interstitials and native ads that don't wreck the user experience."
+    }
+  ],
+  "socials": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/kazmi-dev"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/syed-turaab-haider-kazmi-93440228a"
+    }
+  ],
+  "theme": {
+    "design": "ide",
+    "accent": "#2F5BEA",
+    "mode": "dark"
+  }
+}

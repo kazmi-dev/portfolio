@@ -1,0 +1,132 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "portfolio.schema.json",
+  "title": "Founder portfolio",
+  "description": "One data file for every Agile Interface founder portfolio design (ide, showcase, …). VS Code reads this for autocomplete and error squiggles.",
+  "type": "object",
+  "required": ["person", "projects", "theme"],
+  "additionalProperties": false,
+  "definitions": {
+    "text": { "type": "string" },
+    "link": {
+      "type": "object",
+      "required": ["label", "url"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "type": "string", "description": "Button text, e.g. \"Google Play\" or \"GitHub\"." },
+        "url": { "type": "string", "description": "https://… or mailto:… Empty links are hidden." }
+      }
+    },
+    "stat": {
+      "type": "object",
+      "required": ["label", "value"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "type": "string" },
+        "value": { "type": "string", "description": "A string so you can write \"10k+\", \"4.8\" or \"+32%\"." }
+      }
+    },
+    "localImage": {
+      "type": "string",
+      "description": "Local path like assets/img/projects/app.png (png, jpg, webp, svg, avif). Leave \"\" for the built-in placeholder.",
+      "pattern": "^$|^[\\w./-]+\\.(png|jpe?g|webp|svg|avif)$"
+    }
+  },
+  "properties": {
+    "$schema": { "type": "string" },
+    "person": {
+      "type": "object",
+      "required": ["name", "role", "email"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "role": { "type": "string", "description": "e.g. \"Android & Kotlin Multiplatform Developer\" or \"ASO & Growth Marketer\"." },
+        "headline": { "type": "string", "description": "One short line. Wrap words in *stars* to colour them with the accent." },
+        "location": { "type": "string" },
+        "utcOffset": { "type": "number", "minimum": -12, "maximum": 14, "description": "Your time zone, used for the local clock. Pakistan = 5." },
+        "avatar": { "$ref": "#/definitions/localImage" },
+        "resume": { "type": "string", "pattern": "^$|^[\\w./-]+\\.pdf$", "description": "Local PDF like assets/cv/resume.pdf. Leave \"\" to hide the button." },
+        "email": { "type": "string" },
+        "available": { "type": "boolean", "description": "Shows the green \"available\" status when true." },
+        "availableNote": { "type": "string", "description": "Text next to the status dot, e.g. \"Open to freelance work\"." },
+        "company": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": { "type": "string" },
+            "role": { "type": "string", "description": "Your title there, e.g. \"Co-founder\"." },
+            "url": { "type": "string" }
+          }
+        }
+      }
+    },
+    "about": { "type": "array", "items": { "type": "string" }, "description": "One string per paragraph." },
+    "stats": { "type": "array", "items": { "$ref": "#/definitions/stat" } },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["group", "items"],
+        "additionalProperties": false,
+        "properties": {
+          "group": { "type": "string" },
+          "items": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "kind", "summary"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "kind": { "enum": ["app", "library", "case-study"] },
+          "summary": { "type": "string" },
+          "platforms": { "type": "array", "items": { "enum": ["android", "ios", "desktop", "web"] } },
+          "metrics": { "type": "array", "items": { "$ref": "#/definitions/stat" } },
+          "image": { "$ref": "#/definitions/localImage", "description": "Portrait screenshot shown inside the phone frame (about 9:19.5, e.g. 1080×2340)." },
+          "icon": { "$ref": "#/definitions/localImage", "description": "Square app icon, 512×512." },
+          "color": { "type": "string", "pattern": "^$|^#[0-9a-fA-F]{6}$", "description": "Brand colour of the app, used for the placeholder screen and tints." },
+          "install": { "type": "string", "description": "Optional one-line install snippet for libraries, e.g. implementation(\"group:artifact:1.0.0\")." },
+          "links": { "type": "array", "items": { "$ref": "#/definitions/link" } }
+        }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["role", "org"],
+        "additionalProperties": false,
+        "properties": {
+          "role": { "type": "string" },
+          "org": { "type": "string" },
+          "from": { "type": "string" },
+          "to": { "type": "string", "description": "\"now\" or \"present\" marks your current role." },
+          "summary": { "type": "string" }
+        }
+      }
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "text"],
+        "additionalProperties": false,
+        "properties": { "title": { "type": "string" }, "text": { "type": "string" } }
+      }
+    },
+    "socials": { "type": "array", "items": { "$ref": "#/definitions/link" } },
+    "theme": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "design": { "enum": ["ide", "showcase", "bento", "dashboard", "store"], "description": "Which design this data was written for. Informational: each site is one design." },
+        "accent": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$", "description": "Your accent colour, e.g. #2F5BEA." },
+        "mode": { "enum": ["dark", "light", "auto"], "description": "Default theme for first-time visitors. auto = follow their system setting." }
+      }
+    }
+  }
+}

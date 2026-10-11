@@ -1,0 +1,15 @@
+# Read by Netlify and Cloudflare Pages (Vercel uses vercel.json instead).
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Content changes often → always revalidate
+/data/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+# CSS / JS / images: cache for a day
+/assets/*
+  Cache-Control: public, max-age=86400

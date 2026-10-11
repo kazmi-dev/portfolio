@@ -1,0 +1,128 @@
+/* ==========================================================================
+   panels.css — what's inside each "file": README, projects.kt, experience.log,
+   skills.gradle.kts, services.md and contact.sh.
+   ========================================================================== */
+
+.comment { font-family: var(--font-mono); font-size: 13px; color: var(--tk-com); }
+
+/* ---------- README.md ---------- */
+.readme { display: flex; flex-wrap: wrap; gap: 36px; align-items: flex-start; }
+.readme__main { flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+.readme__name {
+  font-size: clamp(38px, 5vw, 64px); line-height: 1; letter-spacing: -.035em;
+  color: var(--fg-strong); overflow-wrap: anywhere;
+}
+.cursor { display: inline-block; width: .4em; height: .12em; margin-left: .08em; background: var(--accent); vertical-align: baseline; }
+.readme__role { font-family: var(--font-mono); font-size: 14px; color: var(--accent-text); }
+.readme__headline { font-size: clamp(20px, 2.2vw, 26px); line-height: 1.3; color: var(--fg-strong); font-weight: 600; letter-spacing: -.01em; }
+.readme__about { display: flex; flex-direction: column; gap: 14px; max-width: 640px; font-size: 17px; line-height: 1.7; color: var(--muted); }
+.readme__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+
+.badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.badge { display: inline-flex; border-radius: 6px; overflow: hidden; font-family: var(--font-mono); font-size: 12px; line-height: 1; }
+.badge > span { padding: 6px 9px; }
+.badge__k { background: var(--badge-key); color: #E4EAF5; }
+.badge__v { background: var(--accent); color: var(--on-accent); }
+.badge__v--ok { background: #1F7A35; color: #FFFFFF; }
+.badge__v--busy { background: #A16207; color: #FFFFFF; }
+
+.readme__side { flex: 0 1 270px; display: flex; flex-direction: column; gap: 14px; width: 100%; }
+.photo {
+  aspect-ratio: 1 / 1; border-radius: 20px; overflow: hidden;
+  display: grid; place-items: center;
+  background: linear-gradient(150deg, var(--surface-2), rgba(var(--accent-rgb), .25));
+  border: 1px solid var(--line-strong);
+  font-size: 64px; font-weight: 700; letter-spacing: -.03em; color: var(--fg-strong);
+}
+.photo img { width: 100%; height: 100%; object-fit: cover; }
+.infocard {
+  border-radius: 12px; background: var(--chrome); border: 1px solid var(--line);
+  padding: 14px 16px; font-family: var(--font-mono); font-size: 12px; line-height: 1.9; color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 860px) {
+  .readme { gap: 24px; }
+  .readme__side { display: contents; }               /* let the photo jump to the top */
+  .photo { order: -1; width: 88px; font-size: 30px; border-radius: 18px; }
+  .infocard { flex: 1 1 100%; }
+}
+
+/* ---------- projects.kt ---------- */
+.code-line { font-family: var(--font-mono); font-size: 14px; color: var(--muted); }
+.projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; padding: 18px 0 18px 24px; }
+.project {
+  display: flex; flex-direction: column; gap: 12px;
+  padding: 20px; border-radius: var(--radius);
+  background: var(--surface); border: 1px solid var(--line);
+  transition: transform .3s var(--ease), border-color .3s;
+}
+.project:hover { transform: translateY(-4px); border-color: var(--line-strong); }
+.project__meta { display: flex; justify-content: space-between; gap: 10px; font-family: var(--font-mono); font-size: 12px; }
+.project__kind { color: var(--accent-text); }
+.project__host { color: var(--subtle); }
+.project__head { display: flex; align-items: center; gap: 12px; }
+.project__icon { width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0; overflow: hidden; display: grid; place-items: center; color: #FFFFFF; font-weight: 700; }
+.project__icon img { width: 100%; height: 100%; object-fit: cover; }
+.project__name { font-size: 20px; color: var(--fg-strong); line-height: 1.2; }
+.project__summary { font-size: 14px; line-height: 1.6; color: var(--muted); }
+.project__platforms { font-family: var(--font-mono); font-size: 12px; color: var(--subtle); }
+.metrics { display: flex; flex-wrap: wrap; gap: 8px; }
+.metric { flex: 1 1 90px; border-radius: 10px; background: var(--chrome); border: 1px solid var(--line); padding: 8px 10px; }
+.metric b { display: block; font-size: 17px; color: var(--fg-strong); }
+.metric span { font-size: 12px; color: var(--subtle); }
+.snippet {
+  font-family: var(--font-mono); font-size: 12px; line-height: 1.6;
+  background: var(--chrome); border: 1px solid var(--line); border-radius: 10px;
+  padding: 10px 12px; overflow-x: auto; white-space: nowrap; color: var(--muted);
+}
+.project__links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: auto; padding-top: 4px; }
+.project__links a { font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; }
+.project__links .ico { width: 15px; height: 15px; }
+.empty { color: var(--subtle); font-size: 14px; padding: 12px 24px; }
+
+/* ---------- experience.log ---------- */
+.gitlog { font-family: var(--font-mono); font-size: 14px; }
+.gitlog__cmd { color: var(--subtle); margin-bottom: 18px; }
+.commit { display: flex; gap: 16px; }
+.commit__rail { display: flex; flex-direction: column; align-items: center; }
+.commit__dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--tk-prop); flex-shrink: 0; margin-top: 4px; }
+.commit--head .commit__dot { background: var(--accent); border-color: var(--accent); }
+.commit__line { flex: 1; width: 2px; background: var(--line-strong); margin-top: 4px; }
+.commit:last-child .commit__line { display: none; }
+.commit__body { padding-bottom: 28px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.commit__ref { color: var(--tk-prop); }
+.commit__ref time, .commit__dates { color: var(--subtle); }
+.head-tag { background: var(--accent); color: var(--on-accent); padding: 2px 8px; border-radius: 5px; font-size: 12px; margin-right: 6px; }
+.commit__title { font-family: var(--font-sans); font-size: 20px; font-weight: 700; color: var(--fg-strong); line-height: 1.25; }
+.commit__org { color: var(--muted); font-weight: 500; }
+.commit__summary { font-family: var(--font-sans); font-size: 15px; line-height: 1.6; color: var(--muted); max-width: 640px; }
+
+/* ---------- skills.gradle.kts ---------- */
+.skills { display: flex; flex-wrap: wrap; gap: 36px; }
+.gradle { flex: 1 1 380px; min-width: 0; font-family: var(--font-mono); font-size: 14px; line-height: 2; color: var(--muted); white-space: pre; overflow-x: auto; }
+.chipgroups { flex: 1 1 300px; display: flex; flex-direction: column; gap: 18px; }
+.chipgroup { display: flex; flex-direction: column; gap: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  padding: 6px 12px; border-radius: 999px; font-size: 14px;
+  background: var(--surface-2); border: 1px solid var(--line-strong); color: var(--fg);
+  transition: border-color .2s, transform .2s var(--ease);
+}
+.chip:hover { border-color: var(--accent-text); transform: translateY(-2px); }
+
+/* ---------- services.md ---------- */
+.services { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-top: 18px; }
+.service { padding: 20px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
+.service__title { font-size: 18px; color: var(--fg-strong); display: flex; gap: 10px; align-items: baseline; }
+.service__title .mono { font-size: 13px; color: var(--tk-ok); }
+.service p { font-size: 15px; line-height: 1.6; color: var(--muted); }
+.md-h { font-size: clamp(28px, 3vw, 38px); color: var(--fg-strong); letter-spacing: -.02em; }
+.md-h .mono { color: var(--subtle); font-weight: 400; margin-right: 8px; }
+
+/* ---------- contact.sh ---------- */
+.script { font-family: var(--font-mono); font-size: 15px; line-height: 1.95; color: var(--muted); overflow-wrap: anywhere; }
+.script a:not(.btn) { color: var(--tk-str); }
+.script a:not(.btn):hover { text-decoration: underline; }
+.script__actions { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 10px; font-family: var(--font-sans); }
+.script__actions .btn { min-height: 48px; font-size: 16px; }

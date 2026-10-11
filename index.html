@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TODO: put your name in the title + description, and replace yourdomain.com below -->
+  <title>[Full Name] — Android &amp; Kotlin Multiplatform Developer</title>
+  <meta name="description" content="Portfolio of [Full Name], Android and Kotlin Multiplatform developer and co-founder of Agile Interface.">
+  <meta name="theme-color" content="#0B101C">
+  <link rel="canonical" href="https://yourdomain.com/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="[Full Name] — Android &amp; KMP Developer">
+  <meta property="og:description" content="Apps, open source and experience, laid out like a code editor.">
+  <meta property="og:image" content="https://yourdomain.com/assets/img/og-image-1200x630.png">
+  <meta property="og:url" content="https://yourdomain.com/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Apply a saved theme before the first paint (no flash). theme.js explains the rules. -->
+  <script>
+    (function () {
+      try { var t = localStorage.getItem('pf-theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+    })();
+  </script>
+
+  <link rel="icon" href="assets/favicon/favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preload" href="assets/fonts/space-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/ide.css">
+  <link rel="stylesheet" href="assets/css/panels.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#editor">Skip to content</a>
+
+  <div class="desk">
+    <div class="window">
+
+      <!-- ===== Title bar ===== -->
+      <header class="titlebar">
+        <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+        <p class="titlebar__title mono"><span data-slot="slug">portfolio</span> — portfolio — <span data-slot="file-name">README.md</span></p>
+        <div class="titlebar__actions">
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme"></button>
+          <a class="btn btn--accent btn--sm mono" href="#contact">hire()</a>
+        </div>
+      </header>
+
+      <div class="workbench">
+
+        <!-- ===== Activity bar (decoration) ===== -->
+        <div class="activity" aria-hidden="true">
+          <span class="activity__item is-active"><svg viewBox="0 0 24 24" class="ico"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
+          <span class="activity__item"><svg viewBox="0 0 24 24" class="ico"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span>
+          <span class="activity__item"><svg viewBox="0 0 24 24" class="ico"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="9" r="2.5"/><path d="M6 8.5v7M18 11.5c0 4-6 3-11 5.2"/></svg></span>
+          <span class="activity__item"><svg viewBox="0 0 24 24" class="ico"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><path d="M17 3l4 4-4 4-4-4z"/></svg></span>
+        </div>
+
+        <!-- ===== Explorer ===== -->
+        <nav class="explorer" aria-label="Portfolio files">
+          <p class="explorer__label mono">EXPLORER</p>
+          <p class="explorer__folder mono">▾ PORTFOLIO</p>
+          <ul class="explorer__files" data-slot="files"></ul>
+          <div class="profile" data-slot="profile"></div>
+        </nav>
+
+        <!-- ===== Editor ===== -->
+        <main class="editor" id="editor" tabindex="-1">
+          <nav class="tabs" aria-label="Open files" data-slot="tabs"></nav>
+          <p class="crumbs mono">portfolio › <span data-slot="file-name">README.md</span></p>
+
+          <div class="panels">
+            <noscript><p class="noscript">This portfolio needs JavaScript to load its content.</p></noscript>
+            <section class="panel" id="panel-readme" data-panel="readme" aria-label="README.md" tabindex="-1" data-slot="panel-readme"></section>
+            <section class="panel" id="panel-projects" data-panel="projects" aria-label="projects.kt" tabindex="-1" data-slot="panel-projects" hidden></section>
+            <section class="panel" id="panel-experience" data-panel="experience" aria-label="experience.log" tabindex="-1" data-slot="panel-experience" hidden></section>
+            <section class="panel" id="panel-skills" data-panel="skills" aria-label="skills.gradle.kts" tabindex="-1" data-slot="panel-skills" hidden></section>
+            <section class="panel" id="panel-services" data-panel="services" aria-label="services.md" tabindex="-1" data-slot="panel-services" hidden></section>
+            <section class="panel" id="panel-contact" data-panel="contact" aria-label="contact.sh" tabindex="-1" data-slot="panel-contact" hidden></section>
+          </div>
+
+          <!-- ===== Terminal ===== -->
+          <section class="terminal" aria-label="Terminal">
+            <div class="terminal__tabs mono" aria-hidden="true"><span class="is-active">TERMINAL</span><span>PROBLEMS</span><span>OUTPUT</span></div>
+            <div class="terminal__body mono" data-terminal>
+              <div class="terminal__log" data-terminal-log role="log" aria-live="polite"></div>
+              <form class="terminal__form" data-terminal-form autocomplete="off">
+                <label for="term-input"><span class="t-ok">➜</span> <span class="t-path">~/portfolio</span></label>
+                <input id="term-input" class="terminal__input" type="text" spellcheck="false" autocapitalize="off" placeholder="type help" aria-label="Terminal command, type help for a list">
+              </form>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <!-- ===== Status bar ===== -->
+      <footer class="statusbar mono">
+        <div class="statusbar__group">
+          <span>⎇ main</span>
+          <span class="hide-sm">Kotlin</span>
+          <span data-slot="status-name" class="hide-sm"></span>
+        </div>
+        <div class="statusbar__group">
+          <span data-slot="file-name" class="hide-sm">README.md</span>
+          <span class="hide-sm">theme: <span data-theme-name>dark</span></span>
+          <span data-slot="status-time"></span>
+          <span data-slot="status-available"></span>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

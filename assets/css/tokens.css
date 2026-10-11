@@ -1,0 +1,85 @@
+/* ==========================================================================
+   tokens.css — every colour, font and size in one place.
+   Like MaterialTheme.colorScheme in Compose: components read ROLES (var(--fg)),
+   never raw hex values, so switching theme = swapping this table.
+   The accent comes from portfolio.json (theme.accent) and is set by utils.js → applyAccent().
+   ========================================================================== */
+
+:root {
+  /* accent defaults (overwritten from the JSON at runtime) */
+  --accent: #2F5BEA;
+  --accent-rgb: 47, 91, 234;
+  --on-accent: #FFFFFF;
+  --accent-hi: #8FA9FF;
+
+  --font-sans: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Space Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --radius: 14px;
+  --radius-sm: 8px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+/* ---------- Dark (default) ---------- */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --desk: #070B14;
+  --desk-dot: rgba(143, 169, 255, .16);
+  --window: #0D1220;
+  --chrome: #0A0F1B;          /* title bar, activity bar, tabs strip, terminal */
+  --sidebar: #0B101C;
+  --surface: #111830;         /* cards */
+  --surface-2: #141C30;       /* chips, photo frame */
+  --line: rgba(143, 169, 255, .14);
+  --line-strong: rgba(143, 169, 255, .3);
+  --fg: #E4EAF5;
+  --fg-strong: #FFFFFF;
+  --muted: #C9D3E6;
+  --subtle: #7D8BA3;
+  --faint: #5B6880;
+  --hover: rgba(143, 169, 255, .08);
+  --active-file: rgba(var(--accent-rgb), .24);
+  --accent-text: var(--accent-hi);
+  --shadow: 0 40px 100px -40px rgba(0, 0, 0, .9);
+
+  /* syntax colours */
+  --tk-kw: #C792EA;
+  --tk-str: #9ECE6A;
+  --tk-prop: #8FA9FF;
+  --tk-num: #FFB86C;
+  --tk-com: #7D8BA3;
+  --tk-ok: #28C840;
+  --badge-key: #2A3550;
+}
+
+/* ---------- Light ---------- */
+[data-theme="light"] {
+  color-scheme: light;
+  --desk: #EEF2F9;
+  --desk-dot: rgba(47, 91, 234, .14);
+  --window: #FFFFFF;
+  --chrome: #F1F4FA;
+  --sidebar: #F7F9FC;
+  --surface: #FFFFFF;
+  --surface-2: #F1F4FA;
+  --line: #E1E7F1;
+  --line-strong: #C9D3E6;
+  --fg: #1F2A3D;
+  --fg-strong: #0F1B2D;
+  --muted: #3F4A5C;
+  --subtle: #5B6880;
+  --faint: #8A96AB;
+  --hover: rgba(15, 27, 45, .05);
+  --active-file: rgba(var(--accent-rgb), .14);
+  --accent-text: var(--accent);
+  --shadow: 0 40px 90px -45px rgba(15, 27, 45, .45);
+
+  --tk-kw: #7C3AED;
+  --tk-str: #0B7A55;
+  --tk-prop: #2F5BEA;
+  --tk-num: #B45309;
+  --tk-com: #6B778C;
+  --tk-ok: #15803D;
+  --badge-key: #3F4A5C;
+}
