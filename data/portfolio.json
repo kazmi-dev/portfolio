@@ -1,14 +1,14 @@
 {
   "$schema": "./portfolio.schema.json",
   "person": {
-    "name": "[Full Name]",
+    "name": "Syed Turab Haider",
     "role": "Android & Kotlin Multiplatform Developer",
     "headline": "I build Android apps *people keep.*",
-    "location": "[City], Pakistan",
+    "location": "Islamabad, Pakistan",
     "utcOffset": 5,
     "avatar": "",
     "resume": "",
-    "email": "you@yourdomain.com",
+    "email": "syedzainkazmi78@gmail.com",
     "available": true,
     "availableNote": "Open to freelance work",
     "company": {
@@ -35,128 +35,154 @@
       "value": "[X]"
     }
   ],
-  "skills": [
-    {
-      "group": "Language",
-      "items": [
-        "Kotlin",
-        "Coroutines",
-        "Flow"
-      ]
-    },
-    {
-      "group": "UI",
-      "items": [
-        "Jetpack Compose",
-        "XML Views",
-        "Compose Multiplatform",
-        "Material 3"
-      ]
-    },
-    {
-      "group": "Architecture",
-      "items": [
-        "MVVM",
-        "Clean Architecture",
-        "KMP shared modules"
-      ]
-    },
-    {
-      "group": "Ship & earn",
-      "items": [
-        "Google Play Console",
-        "AdMob",
-        "Gradle KTS",
-        "Git"
-      ]
-    }
-  ],
+ "skills": [
+  {
+    "group": "Languages & Core",
+    "items": [
+      "Kotlin (KMP & JVM)",
+      "Coroutines & Flow",
+      "Swift (iOS Interop)",
+      "Java"
+    ]
+  },
+  {
+    "group": "UI & Multiplatform",
+    "items": [
+      "Compose Multiplatform (CMP)",
+      "Jetpack Compose",
+      "SwiftUI",
+      "Material Design 3",
+      "XML Views & ViewBinding"
+    ]
+  },
+  {
+    "group": "Architecture & Data",
+    "items": [
+      "Clean Architecture & MVI/MVVM",
+      "KMP Shared Modules (expect/actual)",
+      "Dependency Injection (Koin, Hilt)",
+      "Room Database & Offline Sync",
+      "WorkManager"
+    ]
+  },
+  {
+    "group": "Ship & Earn",
+    "items": [
+      "Google Play Console",
+      "AdMob & Mediation (Mintegral, IronSource, Pangle)",
+      "Gradle KTS & Multi-module Builds",
+      "CI/CD & GitHub Actions",
+      "SDK & Library Publishing (Maven / GitHub Packages)"
+    ]
+  }
+],
   "projects": [
-    {
-      "name": "Qibla Finder",
-      "kind": "app",
-      "summary": "Accurate Qibla direction with a live compass, prayer times for your city and a Hijri calendar.",
-      "platforms": [
-        "android"
-      ],
-      "metrics": [
-        {
-          "label": "Installs",
-          "value": "[X]"
-        },
-        {
-          "label": "Store rating",
-          "value": "[X.X]"
-        }
-      ],
-      "image": "",
-      "icon": "",
-      "color": "#1E3A8A",
-      "install": "",
-      "links": [
-        {
-          "label": "Google Play",
-          "url": "https://play.google.com/store/apps/details?id=com.qibla.finder.qiblacompass.qibladirection.hijricalendar.prayertime"
-        }
-      ]
-    },
-    {
-      "name": "Street View Navigation",
-      "kind": "app",
-      "summary": "Street view, voice navigation and live traffic status in one lightweight app.",
-      "platforms": [
-        "android"
-      ],
-      "metrics": [
-        {
-          "label": "Installs",
-          "value": "[X]"
-        },
-        {
-          "label": "Store rating",
-          "value": "[X.X]"
-        }
-      ],
-      "image": "",
-      "icon": "",
-      "color": "#0B7A55",
-      "install": "",
-      "links": [
-        {
-          "label": "Google Play",
-          "url": "https://play.google.com/store/apps/details?id=com.streetview.voice.navigation.traffic.status"
-        }
-      ]
-    },
-    {
-      "name": "AdsNextGen",
-      "kind": "library",
-      "summary": "Open-source Android library built on Google's Next-Gen Mobile Ads SDK. Banners, interstitials and native ads with less boilerplate.",
-      "platforms": [
-        "android"
-      ],
-      "metrics": [
-        {
-          "label": "GitHub stars",
-          "value": "[X]"
-        },
-        {
-          "label": "Latest version",
-          "value": "[X.X]"
-        }
-      ],
-      "image": "",
-      "icon": "",
-      "color": "#B45309",
-      "install": "implementation(\"[group]:adsnextgen:[version]\")",
-      "links": [
-        {
-          "label": "GitHub",
-          "url": "https://github.com/kazmi-dev/AdsNextGen"
-        }
-      ]
-    }
-  ],
+  {
+    "name": "Qibla Finder",
+    "kind": "app",
+    "summary": "High-accuracy utility app featuring real-time magnetometer sensor fusion for live compass direction, astronomical prayer calculation algorithms, Hijri lunar calendar, and background prayer alerts via WorkManager.",
+    "platforms": [
+      "android"
+    ],
+    "tags": [
+      "Kotlin",
+      "SensorManager",
+      "WorkManager",
+      "Firebase",
+      "Clean Architecture"
+    ],
+    "metrics": [
+      {
+        "label": "Active Users",
+        "value": "50K+"
+      },
+      {
+        "label": "Store Rating",
+        "value": "4.6★"
+      }
+    ],
+    "image": "/images/projects/qibla-finder-banner.webp",
+    "icon": "/images/projects/qibla-finder-icon.webp",
+    "color": "#1E3A8A",
+    "install": "",
+    "links": [
+      {
+        "label": "Google Play",
+        "url": "https://play.google.com/store/apps/details?id=com.qibla.finder.qiblacompass.qibladirection.hijricalendar.prayertime"
+      }
+    ]
+  },
+  {
+    "name": "Street View Navigation",
+    "kind": "app",
+    "summary": "Interactive navigation and street-level exploration platform integrating 360° panoramic tile rendering, Mapbox 3D vector map layers, real-time traffic status feeds, and voice-assisted turn-by-turn routing.",
+    "platforms": [
+      "android"
+    ],
+    "tags": [
+      "Kotlin",
+      "Mapbox SDK",
+      "Mapillary",
+      "Location Services",
+      "MVVM"
+    ],
+    "metrics": [
+      {
+        "label": "Downloads",
+        "value": "100K+"
+      },
+      {
+        "label": "Store Rating",
+        "value": "4.4★"
+      }
+    ],
+    "image": "/images/projects/street-view-banner.webp",
+    "icon": "/images/projects/street-view-icon.webp",
+    "color": "#0B7A55",
+    "install": "",
+    "links": [
+      {
+        "label": "Google Play",
+        "url": "https://play.google.com/store/apps/details?id=com.streetview.voice.navigation.traffic.status"
+      }
+    ]
+  },
+  {
+    "name": "AdsNextGen",
+    "kind": "library",
+    "summary": "Open-source Android library simplifying monetization workflows. Wraps Google Mobile Ads Next-Gen SDK with lifecycle-aware Kotlin Coroutines and StateFlow for Banner, Interstitial, Rewarded, and Native ad mediation.",
+    "platforms": [
+      "android"
+    ],
+    "tags": [
+      "Kotlin",
+      "Coroutines",
+      "Google Mobile Ads",
+      "Gradle KTS",
+      "Maven Publish"
+    ],
+    "metrics": [
+      {
+        "label": "License",
+        "value": "Apache-2.0"
+      },
+      {
+        "label": "Distribution",
+        "value": "GitHub Packages"
+      }
+    ],
+    "image": "/images/projects/adsnextgen-banner.webp",
+    "icon": "/images/projects/adsnextgen-icon.webp",
+    "color": "#B45309",
+    "install": "implementation(\"com.github.kazmi-dev:adsnextgen:1.0.0\")",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/kazmi-dev/AdsNextGen"
+      }
+    ]
+  }
+],
   "experience": [
     {
       "role": "Co-founder & KMP Developer",
@@ -166,34 +192,46 @@
       "summary": "Building our own Compose Multiplatform products for Android, iOS and web."
     },
     {
-      "role": "[Android Developer]",
-      "org": "[Company]",
-      "from": "[YYYY]",
-      "to": "[YYYY]",
-      "summary": "[One line on what you shipped there and what changed because of it.]"
-    },
+  "role": "Senior Android Developer",
+  "org": "Trino Technologies",
+  "from": "2025",
+  "to": "Now",
+  "summary": "Architected and shipped flagship utility apps, including Street View Navigation and Qibla Finder, scaling them to 150K+ combined downloads with 4.5★+ ratings while establishing core Clean Architecture and ad mediation standards."
+},
     {
-      "role": "[Degree]",
-      "org": "[University]",
-      "from": "[YYYY]",
-      "to": "[YYYY]",
-      "summary": ""
-    }
+  "role": "Native Android Developer",
+  "org": "Co-operative Tech (Private) LTD",
+  "from": "2023",
+  "to": "2025",
+  "summary": "Engineered real-time voice and text translation pipelines and built adaptive CarPlay head-unit integrations with hands-free voice-command handling and low-latency audio processing."
+}
   ],
   "services": [
-    {
-      "title": "Android apps",
-      "text": "Native Android apps in Kotlin, with Jetpack Compose or XML views."
-    },
-    {
-      "title": "Kotlin Multiplatform",
-      "text": "Share logic and UI between Android, iOS and web from one codebase."
-    },
-    {
-      "title": "Ads & monetisation",
-      "text": "AdMob banners, interstitials and native ads that don't wreck the user experience."
-    }
-  ],
+  {
+    "title": "Native Android Engineering",
+    "text": "Production-grade Android apps built with modern Kotlin, Jetpack Compose, and Clean Architecture. Engineered for smooth 60/120 FPS performance, offline-first reliability, and strict adherence to Google Play policies."
+  },
+  {
+    "title": "Kotlin Multiplatform (KMP)",
+    "text": "Cross-platform development sharing core business logic or complete UIs across Android and iOS using Compose Multiplatform (CMP). Cuts time-to-market in half while retaining 100% native speed and Swift/SwiftUI interoperability."
+  },
+  {
+    "title": "Ad Monetization & Mediation",
+    "text": "Revenue-optimized ad stacks integrating AdMob and multi-network mediation (Mintegral, IronSource, Pangle). Non-intrusive banner, interstitial, and rewarded ad architectures that maximize eCPMs without killing user retention."
+  },
+  {
+    "title": "Maps, Sensors & Navigation",
+    "text": "Location-aware applications featuring custom Mapbox 3D vector tiles, Street View rendering, turn-by-turn voice routing, and hardware sensor fusion (magnetometer, accelerometer, and GPS)."
+  },
+  {
+    "title": "SDK & Modular Library Development",
+    "text": "Self-contained Android SDKs and reusable KMP shared modules. Designed with minimal dependencies, lifecycle-aware Kotlin Coroutines, and automated CI/CD distribution via Maven and GitHub Packages."
+  },
+  {
+    "title": "Architecture & Code Audits",
+    "text": "Refactoring legacy Java/XML codebases into modern Jetpack Compose and Coroutines/Flow. Deep profiling to resolve ANRs, reduce APK size, fix memory leaks, and modernize dependency injection."
+  }
+],
   "socials": [
     {
       "label": "GitHub",
