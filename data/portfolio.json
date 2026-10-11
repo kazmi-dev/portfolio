@@ -18,8 +18,7 @@
     }
   },
   "about": [
-    "I build Android apps in Kotlin with both Jetpack Compose and classic XML views. At Agile Interface I'm now sharing code across Android, iOS and web with Compose Multiplatform.",
-    "[Second paragraph: how you started, what you're learning right now, and the kind of work you're looking for.]"
+    "I build Android apps in Kotlin with both Jetpack Compose and classic XML views. At Agile Interface I'm now sharing code across Android, iOS and web with Compose Multiplatform."
   ],
   "stats": [
     {
