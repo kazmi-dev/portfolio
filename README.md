@@ -150,7 +150,7 @@ Optional. If the list has items, a `services.md` file appears in the explorer. D
 
 ## 5. Customising (good practice for learning)
 
-**Change colours:** edit `assets/css/tokens.css`. Every colour is a variable, defined once for dark and once for light.
+**Change colours:** edit the `:root` variables at the top of `assets/css/site.css`. Every colour is a variable, defined once for dark and once for light.
 
 **Add a terminal command:** in `assets/js/terminal.js`, add a key to `COMMANDS`:
 ```js

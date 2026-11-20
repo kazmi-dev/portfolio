@@ -50,7 +50,7 @@
     (function () {
       function use(base) {
         document.querySelectorAll('[data-home]').forEach(function (a) { a.href = base; });
-        var css = document.createElement('link'); css.rel = 'stylesheet'; css.href = base + 'assets/css/fonts.css';
+        var css = document.createElement('link'); css.rel = 'stylesheet'; css.href = base + 'assets/css/site.css';
         var ico = document.createElement('link'); ico.rel = 'icon'; ico.type = 'image/svg+xml'; ico.href = base + 'assets/favicon/favicon.svg';
         document.head.appendChild(css); document.head.appendChild(ico);
       }
