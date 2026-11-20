@@ -1,7 +1,7 @@
 {
   "$schema": "./portfolio.schema.json",
   "person": {
-    "name": "Syed Turab Haider",
+    "name": "Syed Turaab Haider",
     "role": "Android & Kotlin Multiplatform Developer",
     "headline": "I build Android apps *people keep.*",
     "location": "Islamabad, Pakistan",
