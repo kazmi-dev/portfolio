@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# TODO: replace yourdomain.com with your real domain
-Sitemap: https://yourdomain.com/sitemap.xml
+# Sitemap must be on the same host; Google reads robots.txt only from the domain root
+Sitemap: https://kazmi-dev.github.io/portfolio/sitemap.xml
